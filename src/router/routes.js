@@ -1,5 +1,5 @@
-import { Main } from "../layout";
-import { HomePage } from "../views";
+import { Main, Auth } from "../layout";
+import { HomePage, Login, Register } from "../views";
 
 export const routes = [
   {
@@ -9,6 +9,26 @@ export const routes = [
       {
         path: "",
         component: HomePage,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    component: Auth,
+    children: [
+      {
+        path: "",
+        component: Login,
+      },
+    ],
+  },
+  {
+    path: "/register",
+    component: Auth,
+    children: [
+      {
+        path: "",
+        component: Register,
       },
     ],
   },

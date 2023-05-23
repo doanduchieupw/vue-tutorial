@@ -1,21 +1,25 @@
 <template>
+  <div>user: {{ user }}</div>
   <post-landing></post-landing>
 </template>
 
 <script>
-import { PostLanding } from '../components'
+import { PostLanding } from "../components";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    'post-landing': PostLanding
+    "post-landing": PostLanding,
   },
-  data: function() {
-    return {
-    }
-  }
-}
+  data() {
+    return {};
+  },
+  computed: {
+    user() {
+      return this.$store.state.username;
+    },
+  },
+};
 </script>
 
 <style>
-
 </style>

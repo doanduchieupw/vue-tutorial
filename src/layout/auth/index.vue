@@ -1,5 +1,5 @@
 <template>
-  <div>Auth layout</div>
+  <router-view />
 </template>
 
 <script>

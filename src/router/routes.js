@@ -1,5 +1,5 @@
 import { Main, Auth } from "../layout";
-import { HomePage, Login, Register } from "../views";
+import { CreateBlog, HomePage, Login, Register, ViewBlog } from "../views";
 
 export const routes = [
   {
@@ -9,6 +9,14 @@ export const routes = [
       {
         path: "",
         component: HomePage,
+      },
+      {
+        path: "/create-new-blog",
+        component: CreateBlog,
+      },
+      {
+        path: "/view/:id",
+        component: ViewBlog,
       },
     ],
   },

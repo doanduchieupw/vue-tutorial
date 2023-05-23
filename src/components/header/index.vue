@@ -6,6 +6,9 @@
     <div class="nav-container" v-if="!isMobile">
       <router-link to="/" class="nav">Home</router-link>
       <router-link to="/blogs" class="nav">Blogs</router-link>
+      <router-link v-if="user" to="/create-new-blog" class="nav"
+        >Create Blog</router-link
+      >
       <router-link v-if="!user" to="/login" class="nav"
         >Login/Register</router-link
       >
@@ -64,6 +67,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding-inline: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .logo {

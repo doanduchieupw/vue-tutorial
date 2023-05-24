@@ -138,6 +138,7 @@ export default {
 
 <style scoped>
 .editor-container {
+  margin-top: 16px;
   padding-inline: 24px;
 }
 .header {

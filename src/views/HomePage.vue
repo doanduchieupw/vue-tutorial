@@ -38,7 +38,6 @@ export default {
         cover: blog.cover,
         id: blog.id,
         createdAt: new Date(blog.createdAt.seconds * 1000).toLocaleString("vi"),
-        content: blog.content.substring(0, 40).replace("<p>", ""),
       }));
       return blogListConvert;
     },
